@@ -1,2 +1,6 @@
-# Baile_Joanna_Doria_Fernando_HW4_AV_App
-AV App 
+# Joanna Baile and Fernando D'Oria AV App
+AV App Assginment
+
+## Authors
+* **Fernando D'Oria** (https://github.com/nandodoria)
+* **Joanna Baile** (https://github.com/jobaile)
