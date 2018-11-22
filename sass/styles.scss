@@ -1,2 +1,7 @@
 @import '_vars';
-@import 'modules/_header';
+@import 'modules/login';
+@import 'modules/mixins';
+
+body {
+    background-color: $purple;
+}

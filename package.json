@@ -1,7 +1,7 @@
 {
   "name": "baile_joanna_doria_fernando_av_app",
   "version": "1.0.0",
-  "description": "An application that provides users to select a video from the database",
+  "description": "Roku Flashback app",
   "main": "gulpfile.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -11,10 +11,10 @@
     "url": "git+https://github.com/jobaile/Baile_Joanna_Doria_Fernando_AV_App.git"
   },
   "keywords": [
-    "av",
-    "app",
     "fanshawe",
-    "project"
+    "student",
+    "app",
+    "video"
   ],
   "author": "Fernando D'Oria and Joanna Baile",
   "license": "ISC",
@@ -22,8 +22,7 @@
     "url": "https://github.com/jobaile/Baile_Joanna_Doria_Fernando_AV_App/issues"
   },
   "homepage": "https://github.com/jobaile/Baile_Joanna_Doria_Fernando_AV_App#readme",
-  "dependencies": {
-    "gulp": "^3.9.1",
-    "gulp-sass": "^4.0.2"
+  "devDependencies": {
+    "gulp": "^3.9.1"
   }
 }
