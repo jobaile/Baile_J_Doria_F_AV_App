@@ -4,23 +4,45 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>AV App</title>
+    <title>Roku Flashback</title>
     <!-- Bootstrap -->
-    <link href="css/boostrap/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap/bootstrap.min.css" rel="stylesheet">
     <link href="css/main.css" rel="stylesheet"> <!--SASS CSS-->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
   </head>
 
   <body>
-    <div class="container-fluid"> <!--Container Start-->
+    <main id="app">
+    <div class="container"> <!--Container Start-->
+        <div class="container">
+        <form id="loginForm">
+          <img src="images/logo-purple.png">
+          <h1>LogIn</h1>
+          <p>or sign up</p>
+            <label for="uname"><b>Username or E-mail</b></label>
+            <input type="text" placeholder="roku@example.com" name="uname" required>
+        
+            <label for="psw"><b>Password</b></label>
+            <input type="password" placeholder="*******" name="psw" required>
+        
+            <button type="submit">Login</button>
+            <label>
+                <input type="checkbox" name="showpw"> Show Password
+                <input type="checkbox" checked="checked" name="remember"> Remember Me
+            </label>
+              <span class="psw">Forgot <a href="#">password?</a></span>
+          </div>
+        </form>
+      </div>
+
+      </div>
 
     </div><!--Container End-->
+  </main>
 
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="js/bootstrap/bootstrap.min.js"></script>
+    
+    <!-- Javascript goes here-->
     <script src="js/main.js"></script> <!--JS FILE YOU CAN EDIT-->
   </body>
 </html>
