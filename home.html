@@ -14,28 +14,25 @@
 
   <body>
     <div class="container"> <!--Container Start-->
-        <div class="container">
-        <form id="loginForm">
-          <img src="images/logo-purple.png">
-          <h1>LogIn</h1>
-          <p>or sign up</p>
-            <label for="uname"><b>Username or E-mail</b></label>
-            <input type="text" placeholder="roku@example.com" name="uname" required>
-        
-            <label for="psw"><b>Password</b></label>
-            <input type="password" placeholder="*******" name="psw" required>
-        
-            <button type="submit"><a href="home.html">Login</a></button>
-            <label>
-                <input type="checkbox" name="showpw"> Show Password
-                <input type="checkbox" checked="checked" name="remember"> Remember Me
-            </label>
-              <span class="psw">Forgot <a href="#">password?</a></span>
-          </div>
-        </form>
-      </div>
+        <main id="app">
+            <h4 class="welcome-message text-center"> {{ welcomemessage }}</h4>
+            <ul>
+                <li v-for="tbl_movie in videodata"> <!-- fetches the database stuff -->
+                    <a :href="tbl_movie.url" v-on:click="loadMovie">
+                        <img :src="'images/'  + tbl_movie.img" alt="movie poster">
+                    </a>
+                </li>
+            </ul>
 
-      </div>
+            <section :class="{ 'show-movie' : showDetails }">
+                <h3 class="movie-title text-center"> {{ videotitle }}</h3>
+                <div class="movie-details">
+                    <p> {{ videodescription }} </p>
+                </div>
+            </section>
+
+
+        </main>
     </div><!--Container End-->
 
     

@@ -23,6 +23,7 @@
   },
   "homepage": "https://github.com/jobaile/Baile_Joanna_Doria_Fernando_AV_App#readme",
   "devDependencies": {
-    "gulp": "^3.9.1"
+    "gulp": "^3.9.1",
+    "gulp-sass": "^4.0.2"
   }
 }
