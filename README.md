@@ -14,11 +14,11 @@ $ cd Desktop
 
 # Clone this repository into your local machine
 
-$ git clone https://github.com/jobaile/Baile_Joanna_Doria_Fernando_AV_App
+$ git clone https://github.com/jobaile/Baile_J_Doria_F_AV_App
 
 # Go into the repository
 
-$ cd Baile_Joanna_Doria_Fernando_AV_App
+$ cd Baile_J_Doria_F_AV_App
 
 ```
 

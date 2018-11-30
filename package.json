@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jobaile/Baile_Joanna_Doria_Fernando_AV_App.git"
+    "url": "git+https://github.com/jobaile/Baile_J_Doria_F_AV_App.git"
   },
   "keywords": [
     "fanshawe",
@@ -19,9 +19,9 @@
   "author": "Fernando D'Oria and Joanna Baile",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/jobaile/Baile_Joanna_Doria_Fernando_AV_App/issues"
+    "url": "https://github.com/jobaile/Baile_J_Doria_F_AV_App/issues"
   },
-  "homepage": "https://github.com/jobaile/Baile_Joanna_Doria_Fernando_AV_App#readme",
+  "homepage": "https://github.com/jobaile/Baile_J_Doria_F_AV_App#readme",
   "devDependencies": {
     "gulp": "^3.9.1",
     "gulp-sass": "^4.0.2"
