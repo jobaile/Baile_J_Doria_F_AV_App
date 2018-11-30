@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Roku Flashback</title>
+    <!-- Bootstrap -->
+    <link href="css/bootstrap/bootstrap.min.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet"> <!--SASS CSS-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  </head>
+
+  <body>
+    <div class="container"> <!--Container Start-->
+        <main id="app">
+            <h4 class="welcome-message text-center"> {{ welcomemessage }}</h4>
+            <ul>
+                <li v-for="tbl_movie in videodata"> <!-- fetches the database stuff -->
+                    <a :href="tbl_movie.url" v-on:click="loadMovie">
+                        <img :src="'images/'  + tbl_movie.img" alt="movie poster">
+                    </a>
+                </li>
+            </ul>
+
+            <section :class="{ 'show-movie' : showDetails }">
+                <h3 class="movie-title text-center"> {{ videotitle }}</h3>
+                <div class="movie-details">
+                    <p> {{ videodescription }} </p>
+                </div>
+            </section>
+
+
+        </main>
+    </div><!--Container End-->
+
+    
+    <!-- Javascript goes here-->
+    <script src="js/main.js"></script> <!--JS FILE YOU CAN EDIT-->
+  </body>
+</html>

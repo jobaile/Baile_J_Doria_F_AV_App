@@ -2,8 +2,6 @@
 ![Roku Flashback logo](https://github.com/jobaile/Baile_Joanna_Doria_Fernando_AV_App/blob/dev.jb.files/images/logo-purple.png)
 This application provides uers to select and choose top videos from different decades. There is also a kid friendly option!
 
-## Getting Started
-
 ## Installing
 
 To install, open your command line. Terminal for Mac or Command Prompt for Windows.
@@ -30,7 +28,7 @@ And you’re done!
 
 * [Bootstrap](https://getbootstrap.com/) - Framework
 * [SASS](https://sass-lang.com/) - CSS
-* [Vue.js]
+* [Vue.js](https://vuejs.org/) - Vue.js
 
 ## Authors
 * **Fernando D'Oria** (https://github.com/nandodoria)
