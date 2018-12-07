@@ -60,7 +60,7 @@
                       // getting one movie, so use the single array
                       this.singledata = data; //this is gonna go to the data
                   } else {
-                      // push all the video (or portfolio content) into the video array
+                      // push all the video  into the video array
                       this.videodata = data;
                   }
               })
