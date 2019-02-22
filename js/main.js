@@ -1,73 +1,77 @@
-(()=> {
-  const vm = new Vue({
-      el: '#app',
+    //components will go here
+    import LoginComponent from './components/LoginComponent.js'; //this is like doing a php include
+    import UserComponent from './components/UserComponent.js'; //this is like doing a php include
 
-      data: {
-          welcomemessage : "Roku Flashback",
-          
-          videodata : [], //this gets the array
-          singledata : [],
+const routes = [
+     { path: '/', redirect: { name: 'login' } },
+     { path: '/login', name: 'login', component: LoginComponent },
+     { path: '/users', name: 'users', component: UserComponent } //naming convention should be the same
+     //{ path: '/', name: 'home', component: HomePageComponent },
+    //  { path: '/users/:id', name: 'users', component: UsersPageComponent, props: true },
+    //  { path: '/contact', name: 'contact', component: ContactPageComponent}
+    // { path: '/*', name: 'error', component: ErrorPageComponent}
+];
 
-          videotitle : "",
-          videodescription : "",
-          videsources : "",
+const router = new VueRouter ({
+    routes
+});
 
-          showDetails : false
-      },
+const vm = new Vue ({
+    // el: '#app',
 
-      created : function(){
-          //get all of the movie data on page load
-          this.fetchMovieData(null);
-      },
+    data: {
+        message: "Sup from vue!",
+        authenticated: false, //will be true if authenticated
+        administrator: false,
 
-      methods : {
-          login() {
-              //stub
-              console.log('login functionality');
-          },
+        mockAccount : { 
+            username: "admin",
+            password: "123"
+        },
 
-          fetchSingle(e) {
-              //debugger;
-              this.fetchMovieData(e.currentTarget.dataset.movie);
-          },
+        user: [],
+        currentUser: {}
+    },
 
-          loadMovie(e) {
-              //debugger;
-              e.preventDefault(); // block a page reload (anchor tag default behaviour
+    created: function(){
+        console.log('parent is live');
+    },
 
-              dataKey = e.currentTarget.getAttribute('href');
-              currentData = this.videodata.filter(tbl_movie => tbl_movie.url === dataKey);
+    methods: {
+        logParent(message) {
+            console.log("from the parent", message);
+        },
 
-              this.videotitle = currentData[0].title;
-              this.videodescription = currentData[0].description;
-              this.videosource = dataKey;
+        logMainMsg(message){
+            console.log('called from inside a child, lives in the parent', message);
+        },
 
-              this.showDetails = true;
+        setAuthenticated(status){ //true or false
+            this.authenticated = status;
+        },
 
-              setTimeout(function(){ window.scrollTo(0, 1200)}, 500)
-          },
+        logout(){
+            this.$router.push({ path: "/login"} );
+            this.authenticated = false;
+        },
 
-          fetchMovieData(movie) {
-              //this is a ternary statement (shorthand for if/else). left of the : is true, right is false
-              let url = movie ? `./includes/index.php?movie=${movie}` : './includes/index.php';
+        setCurrentUser(user) {
+            //stub
+            console.log('hit setCurrentUser');
+        }
+    },
 
-              fetch(url) // pass in the one or many query
-              .then(res => res.json())
-              .then(data => {
-                  console.log(data);
+    router: router
+}).$mount("#app");
 
-                  if (movie) {
-                      // getting one movie, so use the single array
-                      this.singledata = data; //this is gonna go to the data
-                  } else {
-                      // push all the video  into the video array
-                      this.videodata = data;
-                  }
-              })
-              .catch(function(error) {
-                  console.log(error);
-              });
-          }
-      }
-  });
-})();
+
+//make the router check all the routes and bounce back if we're not authenticated
+router.beforeEach((to, from, next) => { //these are called router guards
+    console.log("router guard fired");
+
+    if(vm.authenticated == false){
+        next("/login");
+    }else{
+        next();
+    }
+});

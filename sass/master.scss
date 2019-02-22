@@ -1,0 +1,8 @@
+//Code for SASS to be put in terminal BEFORE making any CSS changes
+// sass --watch sass/master.scss:css/master.css --style compressed
+
+@import '_vars';
+@import 'modules/_main';
+@import 'modules/_usercomponent';
+@import 'modules/_footer';
+@import 'modules/_login';

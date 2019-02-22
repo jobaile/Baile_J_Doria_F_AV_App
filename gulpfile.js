@@ -1,15 +1,15 @@
-// Gulp.js configuration
-var
-  // modules
-  gulp = require('gulp'),
-  sass = require('gulp-sass'),
+//This is your gulpfile
+// on your command line enter gulp
+// this will compile your css
+const gulp = require('gulp');
+const sass =  require('gulp-sass');
 
-  // development mode?
-  devBuild = (process.env.NODE_ENV !== 'production'),
+gulp.task('sass', function(){
+    return gulp.src('./sass/**/*.scss')
+    .pipe(sass({ outputStyle: "compressed"}))
+    .pipe(gulp.dest('./css'));
+});
 
-  // folders
-  folder = {
-    src: 'src/',
-    build: 'build/'
-  }
-;
+gulp.task('default', gulp.series('sass'), function(){
+    gulp.watch('.sass/**/*.scss'), gulp.series('sass');
+})
