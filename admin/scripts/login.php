@@ -39,9 +39,6 @@ function login($username, $password, $ip){
 			$_SESSION['user_name'] = $found_user['user_name'];
 
 			//Update user login IP
-			//TODO: use the right SQL query to update the 
-			//	user_ip column to use within tbl_user table
-			//	Don't forget to bind it
 			$update_ip_query = 'UPDATE tbl_user SET user_ip = :ip WHERE user_id = :id';
 			$update_ip_set = $pdo->prepare($update_ip_query);
 			$update_ip_set->execute(
@@ -75,3 +72,48 @@ function login($username, $password, $ip){
 		return $message;
 	}
 }
+
+	function editUser($id, $fname, $username, $password, $email){
+		include('connect.php');
+
+		$update_user_query = 'UPDATE tbl_user SET user_fname=:fname, user_name=:username,';
+		$update_user_query .=' user_pass=:password, user_email=:email';
+		$update_user_query .=' WHERE user_id = :id';
+
+		$update_user_set = $pdo->prepare($update_user_query);
+		$update_user_set->execute(
+			array(
+				':fname'=>$fname,
+				':username'=>$username,
+				':password'=>$password,
+				':email'=>$email,
+				':id'=>$id
+			)
+		);
+		//When update successfully, redirect user to index.php
+		if($update_user_set->rowCount()){
+			redirect_to('index.php');
+		}else{
+			//otherwise, return an error message
+			$message = 'Guess you got canned...';
+			return $message;
+		}
+	}
+
+	function deleteUser($id) {
+		include('connect.php');
+		$delete_query = "DELETE FROM tbl_user WHERE user_id = :id";
+
+		$delete_user_set = $pdo->prepare($delete_query);
+		$delete_user_set->execute(
+			array(
+				':id'=>$id
+			)
+		);
+		if($delete_query) {
+			redirect_to("../index.php");
+		}else{
+			$message = "Something went wrong";
+			return $message;
+		}
+	}

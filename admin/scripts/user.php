@@ -22,17 +22,3 @@ function createUser($fname,$username,$password,$email){
         return $message;
     }
 }
-
-        //TODO: the following query will create a new row in tbl_user
-        // with user_fname = $fname
-        // user_name = $username
-        // user_pass = $password
-        // user_email = $email
-
-        //TODO: redirect user to index.php if success
-        // otherwise return a message
-
-        //TODO: optional!
-        // check if user exists already
-        // if yes return a message right away
-        // otherwise go with the following logics ^^^^

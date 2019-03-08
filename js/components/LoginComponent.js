@@ -1,78 +1,73 @@
-export default { //look into webpacks
-    //you can put your html stuff in here
+export default {
     template: `
-    <div class="jumbotron roku-jumbotron">
-    <h1 class="display-4">Welcome to Flashback!</h1>
-    <p class="lead">Before revisiting your favourite movies, tv shows or music from yesteryear, please log in with a valid username and password.</p>
-    <hr class="my-4">
-    <form>
-        <div class="form-row align-items-center">
-            <div class="col-sm-3 my-1">
-                <label class="sr-only" for="inlineFormInputName">Name</label>
-                <input v-model="input.username" type="text" class="form-control" id="inlineFormInputName" placeholder="username" required>
-            </div>
+    <section>
+    <div class="cont_principal">
 
-            <div class="col-sm-3 my-1">
-                <label class="sr-only" for="inlineFormPassword">Name</label>
-                <input v-model="input.password" type="password" class="form-control" id="inlineFormPassword" placeholder="password" required>
-            </div>
-
-            <div class="col-auto my-1">
-                <button v-on:click.prevent="login()" type="submit" class="btn btn-primary">Go!</button>
-            </div>
+        <div class="cont_centrar">
+            <form>
+                <div class="cont_tabs_login">
+                    <h2 class="active"><a href="#" onclick="sign_in()">SIGN IN</h2>
+                    <span class="linea_bajo_nom"></span>
+                </div>
+                <div class="cont_text_inputs">
+                    <input v-model="input.username" type="text" class="input_form_sign d_block active_inp" placeholder="EMAIL" name="emauil_us" />
+                    <input v-model="input.password" type="password" class="input_form_sign d_block  active_inp" placeholder="PASSWORD" name="pass_us" />  
+                </div>
+                <div class="cont_btn">
+                    <button v-on:click.prevent="login()" type="submit" class="btn_sign">Log In</button>
+                </div>
+            </form>
         </div>
-    </form>            
-</div>
-    `,
 
-    data(){ //since we're working on a component this is going to be a function
-        return{
-            input: {
-                username: "",
-                password: ""
-            }
-        }
-    },
+    </div>
+    </section>
+     `,
+ 
+     data() {
+         return {
+             input: {
+                 username: "",
+                 password: ""
+             },
 
-    methods: {
-        login(){
-            console.log("trying to log in!");
-            //check against our live account creds
-            if(this.input.username != "" && this.input.pssword !=""){ //! means if it's not empty
-                
-                //create some form data to do a POST request
-                //a javascript object that defines a variable
-                    //when you parse a form it serializes things
-                let formData = new FormData();
+         }
+     },
+ 
+     methods: {
+         login() {
+            //console.log(this.$parent.mockAccount.username);
+ 
+            if(this.input.username != "" && this.input.password != "") {
+            // fetch the user from the DB
+            // generate the form data
+            let formData = new FormData();
 
-                formData.append("username", this.input.username);
-                formData.append("password", this.input.password);
+             formData.append("username", this.input.username);
+             formData.append("password", this.input.password);
 
-
-                //do a fetch here and check creds on the back end
-                let url = `./admin/admin_login.php`;
-
-                fetch(url,{
+             let url = `./admin/scripts/admin_login.php`;
+ 
+             fetch(url, {
                     method: 'POST',
                     body: formData
-                }) 
-                    .then(res => res.json())
-                        .then(data =>{
-                            if (data == "Login Failed"){
-                                // if the php file returns a failure, try again
-                                console.log("authentication failed, try again");
-                            } else {
-                                // if the back-end authentication works, then go to the users page
-                                this.$emit("authenticated", true);
-                                this.$router.replace({name: "users"});
-                            }
-                        })
-                    .catch(function(error) {
-                        console.error(error);
-                    });
-            }else {
-                console.log("username and password cant be blank");
+                })
+                 .then(res => res.json())
+                 .then(data => {
+                    if (typeof data != "object") { // means that we're not getting a user object back
+                        console.warn(data);
+                        console.error("authentication failed, please try again");
+                        this.$emit("autherror", data);
+                    } else {
+                        this.$emit("authenticated", true, data[0]);
+                        this.$router.replace({ name: "users" });
+                    }
+                })
+             .catch(function(error) { 
+                 console.log(error);
+             });
+        } else {
+                 console.log("A username and password must be present");
             }
         }
     }
-}
+ }

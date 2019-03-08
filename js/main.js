@@ -1,77 +1,98 @@
-    //components will go here
-    import LoginComponent from './components/LoginComponent.js'; //this is like doing a php include
-    import UserComponent from './components/UserComponent.js'; //this is like doing a php include
 
-const routes = [
-     { path: '/', redirect: { name: 'login' } },
-     { path: '/login', name: 'login', component: LoginComponent },
-     { path: '/users', name: 'users', component: UserComponent } //naming convention should be the same
-     //{ path: '/', name: 'home', component: HomePageComponent },
-    //  { path: '/users/:id', name: 'users', component: UsersPageComponent, props: true },
-    //  { path: '/contact', name: 'contact', component: ContactPageComponent}
-    // { path: '/*', name: 'error', component: ErrorPageComponent}
-];
+import UsersComponent from './components/UsersComponent.js';
+import LoginComponent from './components/LoginComponent.js';
+import AdminComponent from './components/AdminComponent.js';
+import UserHomeComponent from './components/UserHomeComponent.js';
 
-const router = new VueRouter ({
-    routes
+let router = new VueRouter({
+
+  routes: [
+      { path: '/', redirect: { name: "login"} },
+      { path: '/login', name: "login", component: LoginComponent },
+      { path: '/users', name: 'users', component: UsersComponent },
+      { path: '/userhome', name: "home", component: UserHomeComponent, props: true },
+      { path: '/admin', name: 'admin', component: AdminComponent }
+  ]
 });
 
-const vm = new Vue ({
-    // el: '#app',
+const vm = new Vue({
+ 
+  data: {
+    // socItems: [
 
-    data: {
-        message: "Sup from vue!",
-        authenticated: false, //will be true if authenticated
-        administrator: false,
+    //   {link:"http://www.twitter.com", id: "twitter", class: "fab fa-twitter"},
+    //   {link:"http://www.facebook.com", id: "facebook", class: "fab fa-facebook-square"},
+    //   {link:"http://www.instagram.com", id: "instagram", class: "fab fa-instagram"},
+    //   {link:"https://www.youtube.com/", id: "instagram", class: "fab fa-youtube"},
 
-        mockAccount : { 
-            username: "admin",
-            password: "123"
-        },
+    // ],
+    authenticated: false,
+    administrator: false,
 
-        user: [],
-        currentUser: {}
+    message: "hello from the parent",
+
+    mockAccount: {
+      username: "user",
+      password: "password"
     },
 
-    created: function(){
-        console.log('parent is live');
+    user: [],
+
+    //currentUser: {},
+
+    toastmessage: "Login failed!"
+  },
+
+  created: function() {
+    // do a session check and set authenticated to true if the session still exists
+    // if the cached user exists, then just navigate to their user home page
+
+    // the localstorage session will persist until logout
+
+    if (localStorage.getItem("cachedUser")) {
+      let user = JSON.parse(localStorage.getItem("cachedUser"));
+      this.authenticated = true;
+      // params not setting properly, so this route needs to be debugged a bit...
+      this.$router.push({ name: "home", params: { currentuser: user }});
+    } else {
+      this.$router.push({ path: "/login"} );
+    }    
+  },
+
+  methods: {
+    setAuthenticated(status, data) {
+      this.authenticated = status;
+      this.user = data;
     },
 
-    methods: {
-        logParent(message) {
-            console.log("from the parent", message);
-        },
-
-        logMainMsg(message){
-            console.log('called from inside a child, lives in the parent', message);
-        },
-
-        setAuthenticated(status){ //true or false
-            this.authenticated = status;
-        },
-
-        logout(){
-            this.$router.push({ path: "/login"} );
-            this.authenticated = false;
-        },
-
-        setCurrentUser(user) {
-            //stub
-            console.log('hit setCurrentUser');
-        }
+    popError(errorMsg) {
+      // set the error message string and show the toast notification
+      this.toastmessage = errorMsg;
+      $('.toast').toast('show');
     },
 
-    router: router
+    logout() {
+      // delete local session
+      if (localStorage.getItem("cachedUser")) {
+        localStorage.removeItem("cachedUser");
+      }
+      // push user back to login page
+      this.$router.push({ path: "/login" });
+      this.authenticated = false;
+      
+      
+    }
+  },
+
+  router: router
 }).$mount("#app");
 
+router.beforeEach((to, from, next) => {
+  console.log('router guard fired!', to, from, vm.authenticated);
 
-//make the router check all the routes and bounce back if we're not authenticated
-router.beforeEach((to, from, next) => { //these are called router guards
-    console.log("router guard fired");
-
-    if(vm.authenticated == false){
-        next("/login");
-    }else{
-        next();
-    }
+  if (vm.authenticated == false) {
+    next("/login");
+  } else {
+    next();
+  }
 });
