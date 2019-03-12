@@ -1,13 +1,11 @@
 <?php 
-    require_once('../admin/scripts/config.php');
+    require_once('scripts/config.php');
 
     if (isset($_GET['media'])) {
         $type = $_GET['media'];
 
-        if ($type == "video") {
+        if ($type == "movies") {
             $tbl = "tbl_movies";
-        } else {
-            $tbl = "tbl_audio";
         }
     }
 
