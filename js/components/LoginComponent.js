@@ -1,19 +1,19 @@
 export default {
     template: `
     <section>
-    <div class="cont_principal">
+    <div class="login-page">
 
-        <div class="cont_centrar">
+        <div class="login-box">
             <form>
                 <div class="cont_tabs_login">
-                    <h2 class="active"><a href="#" onclick="sign_in()">SIGN IN</h2>
+                    <h2 class="active">Log In</h2>
                     <span class="linea_bajo_nom"></span>
                 </div>
                 <div class="cont_text_inputs">
                     <input v-model="input.username" type="text" class="input_form_sign d_block active_inp" placeholder="EMAIL" name="emauil_us" />
                     <input v-model="input.password" type="password" class="input_form_sign d_block  active_inp" placeholder="PASSWORD" name="pass_us" />  
                 </div>
-                <div class="cont_btn">
+                <div class="login_btn">
                     <button v-on:click.prevent="login()" type="submit" class="btn_sign">Log In</button>
                 </div>
             </form>
