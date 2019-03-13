@@ -1,8 +1,8 @@
 
-import UsersComponent from './components/UsersComponent.js';
-import LoginComponent from './components/LoginComponent.js';
-import AdminComponent from './components/AdminComponent.js';
-import UserHomeComponent from './components/UserHomeComponent.js';
+import UsersComponent from './components/usersComponent.js';
+import LoginComponent from './components/loginTestComponent.js';
+import AdminComponent from './components/adminComponent.js';
+import UserHomeComponent from './components/homeComponent.js';
 
 let router = new VueRouter({
 
@@ -18,14 +18,6 @@ let router = new VueRouter({
 const vm = new Vue({
  
   data: {
-    // socItems: [
-
-    //   {link:"http://www.twitter.com", id: "twitter", class: "fab fa-twitter"},
-    //   {link:"http://www.facebook.com", id: "facebook", class: "fab fa-facebook-square"},
-    //   {link:"http://www.instagram.com", id: "instagram", class: "fab fa-instagram"},
-    //   {link:"https://www.youtube.com/", id: "instagram", class: "fab fa-youtube"},
-
-    // ],
     authenticated: false,
     administrator: false,
 
