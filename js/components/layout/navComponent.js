@@ -2,16 +2,16 @@ export default {
   template: `
   <div class="top-bar">
       <div class="top-bar-left">
+          <img src="images/logo-purple.png" alt="nav logo" id="navlogo">
           <ul class="menu" id="main-nav">
-          <p>Roku Flashback</p>
           <li v-on:click="changeMediaType">
-              <img src="images/icon-movies.svg" alt="Movies Icon" id="movie" />
+              <img src="images/icon-movies.svg" alt="Movies Icon" id="movie" class="navlinks" />
           </li>
           <li v-on:click="changeMediaType">
-              <img src="images/icon-television.svg" alt="TV Icon" id="tv"/>
+              <img src="images/icon-television.svg" alt="TV Icon" id="tv" class="navlinks"/>
           </li>
           <li v-on:click="changeMediaType">
-              <img src="images/icon-music.svg" alt="Music Icon" id="music"/>
+              <img src="images/icon-music.svg" alt="Music Icon" id="music" class="navlinks"/>
           </li>
           </ul>
       </div>

@@ -18,7 +18,8 @@ export default {
         </div>
 
     </div>
-
+    
+    <div id="yearlinks">
     <ul>
         <li><a href="#">2000s</a></li>
         <li><a href="#">1990s</a></li>
@@ -26,8 +27,9 @@ export default {
         <li><a href="#">1970s</a></li>
         <li><a href="#">All</a></li>
     </ul>
-
     <div>
+
+    <div id="movieSelect">
         <img v-if="activeInfo" v-for="media in retrievedMedia" :src="'images/movie/' + media.movies_cover" alt="media thumb" @click="switchActiveMedia(media)" class="img-thumbnail rounded float-left media-thumb">
     </div>
 

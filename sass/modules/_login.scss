@@ -3,7 +3,7 @@
     width: 100%;
     height: 100%;
   /* Rectangle 3: */
-  background-image: linear-gradient(-87deg, #F2F5F6 0%, #DDE5E8 100%);
+  background-image: linear-gradient(-87deg, #5d3582 0%, #6C3C97 100%);
   }
   
   .login-box{
@@ -89,7 +89,7 @@
     float: left;
     width: 90%;
     border: none;
-    border-bottom: 1px solid #B0BEC5 ;
+    border-bottom: 1px solid #6C3C97 ;
     background-color: transparent;
     font-size: 14px;
     outline: none;
@@ -103,7 +103,7 @@
   
   .active_inp {
     margin: 5% 5% ;  
-    padding: 10px 0px;
+    padding: 20px;
     opacity: 1;
   height: 5px;
   }
@@ -111,7 +111,7 @@
   
   
   .input_form_sign:focus {
-    border-bottom: 1px solid #FF8383 ;}
+    border-bottom: 3px solid #6C3C97 ;}
   
   .link_forgot_pass {
   position: relative;
@@ -166,4 +166,5 @@
    
   h2 {
       padding-left: 2.5em;
+      color: $purple;
   }
