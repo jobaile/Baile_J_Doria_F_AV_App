@@ -1,18 +1,32 @@
-//Code for SASS to be put in terminal BEFORE making any CSS changes
-// sass --watch sass/master.scss:css/master.css --style compressed
-
-
-//Global things
 @import '_vars';
-@import 'modules/_mixins'; //media queries + mixins
-
-//Different areas of the site
-@import 'modules/_login';
-@import 'modules/_footer';
-
-//Pages
+@import 'modules/_main';
 @import 'modules/_usercomponent';
 @import 'modules/_userhomecomponent';
-@import 'modules/_main';
+@import 'modules/_footer';
+@import 'modules/_login';
+@import 'modules/mediaqueries';
+@import 'modules/_nav';
+@import 'modules/lightbox';
 
-@import '_joanna';
+#app {
+    background-color: $white;
+}
+
+body {
+
+    color:black; 
+    background-color:white;
+    font-family: $reg-font;
+    background: none;
+
+    h2 {
+
+        font-family: $reg-font;
+
+    }
+}
+
+.hidden {
+
+    display: none;
+}

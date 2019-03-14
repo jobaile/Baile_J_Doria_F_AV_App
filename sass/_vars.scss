@@ -1,6 +1,5 @@
-$purple: #6C3C97;
-$black: - #1B1B1B;
-$white: #FFFFFF;
+$dark-bg: rgb(26, 24, 24);
+$roku-purple: #6C3C97;
 
 @mixin vertical-align($position: relative) {
     position: $position;
@@ -9,4 +8,31 @@ $white: #FFFFFF;
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
 }
+
+
+@font-face {
+    font-family: 'bauhaus-boldregular';
+    src: url('../fonts/bauhaub-webfont.woff2') format('woff2'),
+         url('../fonts/bauhaub-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+@font-face {
+    font-family: 'helveticaneue-medium';
+    src: url('../fonts/helveticaneue-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+$main-color: #73429B; 
+$second-color: #77479d;
+$dark-color: #3C3C3C;
+$white: #F5F5F5;
+$heading-font: "bauhaus-boldregular", sans-serif; 
+$reg-font: "helveticaneue-medium", sans-serif; 
   
