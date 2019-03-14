@@ -1,12 +1,16 @@
 import MoviesComponent from "./MoviesComponent.js"
-import AudioComponent from "./AudioComponent.js"
+import MusicComponent from "./MusicComponent.js"
 import TvComponent from "./TvComponent.js"
-import NavHeaderComponent from "./layout/NavHeaderComponent.js"
+import NavHeaderComponent from "./layout/navComponent.js"
+
 export default {
   props: ['currentUser'],
-  template: `
+  template: /*html */`
   <div>
-  <MoviesComponent></MoviesComponent>
+  <NavHeaderComponent @updateMedia="updateMedia"></NavHeaderComponent>
+  <MoviesComponent v-if="media == 'movie'"></MoviesComponent>
+  <MusicComponent v-if="media == 'music'"></MusicComponent>
+  <TvComponent v-if="media == 'tv'"></TvComponent>
  </div>
  `,
   data() {
@@ -19,13 +23,16 @@ export default {
   },
   components: {
     MoviesComponent: MoviesComponent,
-    AudioComponent: AudioComponent,
+    MusicComponent: MusicComponent,
     TvComponent: TvComponent,
     NavHeaderComponent: NavHeaderComponent
   },
   methods: {
     updateMedia(media) {
       this.media = media;
+    },
+    updateDecade(decade) {
+      this.decade = decade;
     }
   }
 };

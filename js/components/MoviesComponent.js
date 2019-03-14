@@ -19,8 +19,16 @@ export default {
 
     </div>
 
+    <ul>
+        <li><a href="#">2000s</a></li>
+        <li><a href="#">1990s</a></li>
+        <li><a href="#">1980s</a></li>
+        <li><a href="#">1970s</a></li>
+        <li><a href="#">All</a></li>
+    </ul>
+
     <div>
-        <img v-if="activeInfo" v-for="media in retrievedMedia" :src="'images/video/' + media.movies_cover" alt="media thumb" @click="switchActiveMedia(media)" class="img-thumbnail rounded float-left media-thumb">
+        <img v-if="activeInfo" v-for="media in retrievedMedia" :src="'images/movie/' + media.movies_cover" alt="media thumb" @click="switchActiveMedia(media)" class="img-thumbnail rounded float-left media-thumb">
     </div>
 
     </div>
