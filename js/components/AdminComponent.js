@@ -1,5 +1,6 @@
 export default {
     template: `
+    <div>
     <h1>Admin Dashboard</h1>
     <h3>Welcome!</h3>
     <p> {{ message }}</p>
@@ -12,6 +13,7 @@ export default {
             <!-- scripts/caller.php?caller_id=logout -->
         </ul>
     </nav>
+    </div>
     `,
 
     data() {

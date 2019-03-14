@@ -6,15 +6,15 @@
     if (isset($_GET['video'])){
         $type = $_GET['video'];
         $tbl = "tbl_movies";
-        $tbl3 = 'tbl_mov_era';
+        // $tbl3 = 'tbl_mov_era';
         $col = 'movies_id';
     }
 
     if(isset($_GET['filter'])){
 
-        $tbl2 = 'tbl_era';
-        $col2 = 'era_id';
-        $col3 = 'era_name';
+        // $tbl2 = 'tbl_era';
+        // $col2 = 'era_id';
+        // $col3 = 'era_name';
         $filter = $_GET['filter'];
 
     $results = filterResults($tbl, $tbl2, $tbl3, $col, $col2, $col3, $filter);

@@ -14,13 +14,13 @@ export default {
         </div>
 
         <div class="image-container">
-            <video autoplay controls muted :src="'video/tv/' + mediaDetails.tv_src" class="fs-video"></video>
+            <video autoplay controls muted :src="'video/tv/' + mediaDetails.tv_trailer" class="fs-video"></video>
         </div>
 
     </div>
 
     <div>
-        <img v-if="activeInfo" v-for="media in retrievedMedia" :src="'images/tv/' + media.tv_cover" alt="media thumb" @click="switchActiveMedia(television)" class="img-thumbnail rounded float-left media-thumb">
+        <img v-if="activeInfo" v-for="media in retrievedTV" :src="'images/tv/' + media.tv_cover" alt="media thumb" @click="switchActiveMedia(television)" class="img-thumbnail rounded float-left media-thumb">
     </div>
 
     </div>
@@ -34,7 +34,7 @@ export default {
                 source: "",
             },
 
-            retrievedMedia: [],
+            retrievedTV: [],
         }
     },
 
@@ -59,7 +59,7 @@ export default {
                 .then(res => res.json())
                 .then(data => {         
                     //grabs the media           
-                    this.retrievedMedia = data;
+                    this.retrievedTV = data;
                     //grabs the details each
                     this.mediaDetails = data[0];                    
                 })
