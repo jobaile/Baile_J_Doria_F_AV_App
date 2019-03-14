@@ -2,7 +2,11 @@
 import UsersComponent from './components/UsersComponent.js';
 import LoginComponent from './components/LoginComponent.js';
 import AdminComponent from './components/AdminComponent.js';
-import UserHomeComponent from './components/UserHomeComponent.js';
+import MoviesComponent from './components/MoviesComponent.js';
+import TVComponent from './components/TvComponent.js';
+import MusicComponent from './components/MusicComponent.js';
+
+//import HomeComponent from './components/HomeComponent.js';
 
 let router = new VueRouter({
 
@@ -10,7 +14,9 @@ let router = new VueRouter({
       { path: '/', redirect: { name: "login"} },
       { path: '/login', name: "login", component: LoginComponent },
       { path: '/users', name: 'users', component: UsersComponent },
-      { path: '/userhome', name: "home", component: UserHomeComponent, props: true },
+      { path: '/home', name: "home", component: MoviesComponent, props: true },
+      { path: '/tv', name: "television", component: TVComponent },
+      { path: '/music', name: "music", component: MusicComponent },
       { path: '/admin', name: 'admin', component: AdminComponent }
   ]
 });
@@ -18,18 +24,10 @@ let router = new VueRouter({
 const vm = new Vue({
  
   data: {
-    // socItems: [
-
-    //   {link:"http://www.twitter.com", id: "twitter", class: "fab fa-twitter"},
-    //   {link:"http://www.facebook.com", id: "facebook", class: "fab fa-facebook-square"},
-    //   {link:"http://www.instagram.com", id: "instagram", class: "fab fa-instagram"},
-    //   {link:"https://www.youtube.com/", id: "instagram", class: "fab fa-youtube"},
-
-    // ],
     authenticated: false,
     administrator: false,
 
-    message: "hello from the parent",
+    genericMessage: "hello from the parent",
 
     mockAccount: {
       username: "user",
