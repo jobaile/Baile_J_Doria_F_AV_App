@@ -18,7 +18,7 @@ export default {
 
     data() {
         return {
-            message: "This is the admin dashboard page"
+            message: "Control Your Roku Flashback Experience"
         }
     }
 }

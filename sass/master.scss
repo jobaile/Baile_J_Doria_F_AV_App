@@ -21,6 +21,7 @@ body {
     background-color:white;
     font-family: $reg-font;
     background: none;
+    margin-bottom: 0px;
 
     h2 {
 
@@ -33,3 +34,36 @@ body {
 
     display: none;
 }
+
+
+
+#yearlinks
+{
+    overflow: hidden;
+    background-color: $purple;
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+
+#yearlinks ul
+{
+ list-style-type: none;
+}
+
+
+#yearlinks li a
+{
+    display: block;
+    float: left;
+    margin-right: 20px;
+    color: white;
+}
+
+#movieSelect
+{
+    clear: both;
+}
+
+
+
+
