@@ -6,7 +6,7 @@ export default {
         <div class="card rounded" @click="navToUserHome()">
             <div class="card-body text-center">
                 <img :src="'images/' + liveuser.avatar" class="rounded-circle img-fluid">
-                <p>{{ liveuser.username }}</p>
+                <p class="username_under">{{ liveuser.username }}</p>
             </div>
         </div>
     </div>`,

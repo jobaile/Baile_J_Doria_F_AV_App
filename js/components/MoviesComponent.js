@@ -29,8 +29,8 @@ export default {
     </ul>
     <div>
 
-    <div id="movieSelect">
-        <img v-if="activeInfo" v-for="media in retrievedMedia" :src="'images/movie/' + media.movies_cover" alt="media thumb" @click="switchActiveMedia(media)" class="img-thumbnail rounded float-left media-thumb">
+    <div id="movieSelect" class="grid-x grid-margin-x">
+        <img v-if="activeInfo" v-for="media in retrievedMedia" :src="'images/movie/' + media.movies_cover" alt="media thumb" @click="switchActiveMedia(media)" class="img-thumbnail rounded float-left media-thumb cell small-6 medium-4 large-3">
     </div>
 
     </div>

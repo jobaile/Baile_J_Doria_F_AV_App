@@ -2,12 +2,12 @@ import UserComponent from './UserComponent.js';
 
 export default {
   template: `
-  <div>
-  <div class="grid-x">
-			<div class="cell large-4">
+  <div id="userback">
+  <div id="userSelection" class="grid-x grid-margin-x">
+			<div class="cell large-12">
 				<h1 class="user-message">{{ message }}</h1>
 			</div>
-			<user v-for="(user, index) in userList" :liveuser="user" :key="index"></user>     
+			<user class="cell large-4 medium-4 small-4" v-for="(user, index) in userList" :liveuser="user" :key="index"></user>     
 	</div>
   </div>
 	`,
@@ -19,7 +19,7 @@ export default {
 
 	data() {
 	  return {
-		message: `Select Your Account`,
+		message: `WHO IS STREAMING?`,
 
 		userList: []
 	  }
