@@ -2,7 +2,6 @@ export default {
     template: `
     <section>
     <div class="login-page">
-
         <div class="login-box">
             <form>
                 <div class="cont_tabs_login">
@@ -18,7 +17,6 @@ export default {
                 </div>
             </form>
         </div>
-
     </div>
     </section>
      `,
