@@ -16,3 +16,23 @@
   float: left;
   margin-right: 50px;
 }
+
+.top-bar
+{
+  background-color: white;
+}
+
+#main-nav
+{
+  background-color: white;
+}
+
+.button
+{
+  background-color: $purple;
+}
+
+.button:hover
+{
+  background-color: #5d3582;
+}

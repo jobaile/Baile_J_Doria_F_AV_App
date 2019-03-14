@@ -61,3 +61,11 @@ nav:not(.side-nav) {
 }
 
 .fa-exclamation-triangle { color: red; font-size: 1.5em; }
+
+
+.img-thumbnail:hover
+{
+	filter: gray; /* IE6-9 */
+  -webkit-filter: grayscale(100%);
+  transition: all 0.5s ease;
+}

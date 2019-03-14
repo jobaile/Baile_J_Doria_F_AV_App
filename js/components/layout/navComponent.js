@@ -24,7 +24,7 @@ export default {
           </li>
           <!--<li><input type="search" name="" placeholder="Search"></li>-->
           <li><button type="button" class="button">Search</button></li>
-          <li><button type="button" class="button" v-on:click="logout()">Log Out</button></li>
+          <li><button id="logoutbutton" type="button" class="button" v-on:click="logout()">Log Out</button></li>
           </ul>
       </div>
   </div>
