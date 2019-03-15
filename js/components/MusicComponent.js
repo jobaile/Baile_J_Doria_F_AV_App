@@ -20,7 +20,7 @@ export default {
             </div>
 
             <div class="audio-container">
-                <audio autoplay controls :src="'music/' + currentMediaDetails.music_song"/>
+                <audio controls :src="'music/' + currentMediaDetails.music_audio"/>
                 <img :src="'images/music/' + currentMediaDetails.music_cover" alt="album art"/>
             </div>
         </div>
