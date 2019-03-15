@@ -1,7 +1,4 @@
-import UserComponent from '../UserComponent.js';
-
 export default {
-  props: ['currentuser'],
   template: `
   <div class="top-bar">
       <div class="top-bar-left">
@@ -36,13 +33,12 @@ export default {
 
   data() {
     return {
-      media: 'movies',
-      currentUser: {},
+      media: 'movies'
       //navdisplay: "none",
     };
   },
 
-  created: function() {
+  created: function () {
   },
 
   methods: {
@@ -69,9 +65,5 @@ export default {
       this.authenticated = false;
       localStorage.clear("cachedUser");
     }
-  },
-
-  components: {
-		user: UserComponent
-	}
+  }
 }

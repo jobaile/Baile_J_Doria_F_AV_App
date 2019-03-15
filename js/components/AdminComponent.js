@@ -10,12 +10,18 @@ export default {
             <li><a href="#">Create User</a></li>
             <li><a href="#">Edit User</a></li>
             <li><a href="#">Delete User</a></li>
-            <li><a href="#/home">Go Back</a></li>
-
+            <li><a href="">Sign Out</a></li>
+            <!-- scripts/caller.php?caller_id=logout -->
     </ul>
     </div>
     
     </div>
     </div>
     `,
+
+    data() {
+        return {
+            message: "Control Your Roku Flashback Experience"
+        }
+    }
 }
