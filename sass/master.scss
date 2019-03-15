@@ -9,7 +9,8 @@
 @import 'modules/_login';
 @import 'modules/mediaqueries';
 @import 'modules/_nav';
-@import 'modules/lightbox';
+@import 'modules/_lightbox';
+@import 'modules/_admin';
 
 #app {
     background-color: $white;
@@ -36,33 +37,6 @@ body {
 }
 
 
-
-#yearlinks
-{
-    overflow: hidden;
-    background-color: $purple;
-    padding-top: 20px;
-    padding-bottom: 10px;
-}
-
-#yearlinks ul
-{
- list-style-type: none;
-}
-
-
-#yearlinks li a
-{
-    display: block;
-    float: left;
-    margin-right: 20px;
-    color: white;
-}
-
-#movieSelect
-{
-    clear: both;
-}
 
 
 

@@ -1,0 +1,55 @@
+.admintitle
+{
+    font-family: 'Roboto', sans-serif;
+    font-size: 2em;
+    font-weight: 700;
+    color: $purple;
+    text-align: center;
+} 
+
+.adminmessage
+{
+    font-family: 'Roboto', sans-serif;
+    font-size: 1em;
+    font-weight: 700;
+    color: $purple;
+    text-align: center;
+}
+
+.adminChoices
+{
+    background-color: $purple;
+    border-radius: 20px;
+}
+
+.adminChoices ul
+{
+    list-style-type: none;
+    margin-left: 0px;
+    margin-top: 1rem;
+}
+
+.adminChoices ul li
+{
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.5em;
+    font-weight: 700;
+}
+
+.adminChoices ul li a
+{
+   color: white;
+}
+
+#settings_purple
+{
+    background-color: $purple;
+    padding: 20px;
+}
+
+#settings_white
+{
+    background-color: white;
+    padding: 20px;
+    border-radius: 25px;
+}

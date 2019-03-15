@@ -4,7 +4,7 @@ export default {
     template: `
     <div class="container">
 
-        <div class="grid-x" id="vidbox" ref="lbox" v-if="activeInfo">
+    <div class="grid-x" id="vidbox" ref="lbox" v-if="activeInfo">
         <button class="close-button" @click="closebox">
             <span>&times;</span>
         </button>
@@ -19,8 +19,8 @@ export default {
 
     </div>
 
-    <div>
-        <img v-if="activeInfo" v-for="media in retrievedTV" :src="'images/tv/' + media.tv_cover" alt="media thumb" @click="switchActiveMedia(television)" class="img-thumbnail rounded float-left media-thumb">
+    <div id="tvSelect" class="grid-x grid-margin-x">
+        <img v-if="activeInfo" v-for="media in retrievedTV" :src="'images/tv/' + media.tv_cover" alt="media thumb" @click="switchActiveMedia(television)" class="img-thumbnail rounded float-left media-thumb cell small-6 medium-4 large-3">
     </div>
 
     </div>

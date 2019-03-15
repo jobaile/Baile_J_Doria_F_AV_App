@@ -17,8 +17,8 @@ export default {
 
     </div>
 
-    <div>
-    <img v-if="activeInfo" v-for="media in retrievedMedia" :src="'images/audio/' + media.audio_cover" alt="media thumb" @click="switchActiveMedia(music)" class="img-thumbnail rounded float-left media-thumb audio-thumb">
+    <div id="musicSelect" class="grid-x grid-margin-x">
+    <img v-if="activeInfo" v-for="media in retrievedMedia" :src="'images/audio/' + media.audio_cover" alt="media thumb" @click="switchActiveMedia(music)" class="img-thumbnail rounded float-left media-thumb audio-thumb cell small-6 medium-4 large-3">
     </div>
 
     </div>

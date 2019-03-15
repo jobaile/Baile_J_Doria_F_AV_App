@@ -101,3 +101,56 @@ audio {
     bottom: 12%;
     opacity: 0.8;
 }
+
+#yearlinks
+{
+    overflow: hidden;
+    background-color: $purple;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+#yearlinks ul
+{
+ list-style-type: none;
+}
+
+
+#yearlinks li a
+{
+    display: block;
+    float: left;
+    margin-right: 20px;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.2em;
+    font-weight: 700;
+}
+
+#yearlinks li a:hover
+{
+    display: block;
+    float: left;
+    margin-right: 20px;
+    color: #333333;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.2em;
+}
+
+#tvSelect
+{
+    overflow: hidden;
+    background-color: $purple;
+}
+
+#musicSelect
+{
+    overflow: hidden;
+    background-color: $purple;
+}
+
+
+#movieSelect
+{
+    clear: both;
+}
