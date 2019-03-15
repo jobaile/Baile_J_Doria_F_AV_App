@@ -7,7 +7,7 @@ export default {
 
     data() {
         return {
-            message: "This is the admin dashboard page"
+            message: "This is the kids component"
         }
     }
 }

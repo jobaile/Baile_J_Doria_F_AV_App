@@ -1,7 +1,6 @@
 <?php
 
-function login($username, $password, $ip)
-{
+function login($username, $password, $ip) {
     
 
 require_once('connect.php');

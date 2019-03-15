@@ -23,4 +23,30 @@
 
         echo json_encode($users);
     }
+
+    if (isset($_GET['oneuser'])){
+        include('connect.php');
+
+        $queryOne = 'SELECT * FROM tbl_user WHERE user_id = :id';
+
+        $getOneUser = $pdo->prepare($query);
+        $getOneUser->execute(
+            array(
+                ':id'=> $id
+            )
+        );
+        
+        while($user = $getOneUser->fetch(PDO::FETCH_ASSOC)) {
+            $currentuser =  array();
+            $currentuser['id'] = $user['user_id'];
+            $currentuser['username'] = $user['user_name'];
+            $currentuser['admin'] = $user['user_admin'];
+            $currentuser['access'] = $user['user_access'];
+            $currentuser['avatar'] = $user['user_avatar'];
+
+            $getOneUser[] = $currentuser;
+        }
+
+        echo json_encode($users);
+    }
 ?>

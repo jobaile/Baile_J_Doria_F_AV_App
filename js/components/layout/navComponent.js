@@ -68,7 +68,18 @@ export default {
       this.$router.push({ path: "/" });
       this.authenticated = false;
       localStorage.clear("cachedUser");
-    }
+    },
+      fetchOneUser() {
+      let url = `./admin/scripts/users.php?oneuser=:id`;
+  
+      fetch(url)
+        .then(res => res.json())
+        .then(data => {this.userList = data})
+      .catch(function(error) {
+        console.error(error);
+      });
+      }
+  
   },
 
   components: {
