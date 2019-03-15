@@ -1,8 +1,3 @@
-
-
-// this is the main movie area
-
-
 export default {
     props: ['currentuser'],
 
@@ -80,8 +75,7 @@ export default {
 
             retrievedMedia: [],
 
-            // controls mute / unmute for video element
-            vidActive: false
+            mediaPermission: '',
         }
     },
 
@@ -89,6 +83,7 @@ export default {
         console.log('params:', this.$route.params);
 
         this.loadMedia(null, "video");
+
     },
 
     methods: {
@@ -110,7 +105,15 @@ export default {
                     // grab the first one in the list and make it active
                     this.currentMediaDetails = data[0];  
                     
-                    //this is not working :()
+                    if (localStorage.getItem("admin", data.admin) == 1) {
+                        this.mediaPermission = null;
+                    } else {
+                        this.mediaPermission = '2';
+
+                    }
+
+
+                    //this is not working :(
                     // if (localStorage.getItem("user_access") > 3) {
                     //     this.retrievedMedia = data;
                     //   } 

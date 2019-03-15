@@ -2,7 +2,9 @@
 import UsersComponent from './components/UsersComponent.js';
 import LoginComponent from './components/LoginComponent.js';
 import AdminComponent from './components/AdminComponent.js';
+import CreateComponent from './components/CreateUserComponent.js';
 import HomeComponent from './components/HomeComponent.js';
+// import KidsComponent from './components/KidsComponent.js';
 
 let router = new VueRouter({
 
@@ -11,7 +13,8 @@ let router = new VueRouter({
       { path: '/login', name: "login", component: LoginComponent },
       { path: '/users', name: 'users', component: UsersComponent },
       { path: '/admin', name: 'admin', component: AdminComponent },
-      { path: '/home', name: 'home', component: HomeComponent, props: true }
+      { path: '/home', name: 'home', component: HomeComponent, props: true },
+      { path: '/create', name: 'create', component: CreateComponent },
   ]
 });
 
@@ -48,7 +51,8 @@ const vm = new Vue({
       this.$router.push({ name: "home", params: { currentuser: user }});
     } else {
       this.$router.push({ path: "/login"} );
-    }    
+    }
+  
   },
 
   methods: {

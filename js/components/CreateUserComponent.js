@@ -6,11 +6,9 @@ export default {
     <p class="adminmessage cell small-12 medium-12 large-12" > {{ message }}</p>
 
     <div class="adminChoices cell small-6 medium-6 large-4">
-    <ul>
-            <li><a href="#/create">Create User</a></li>
-            <li><a href="#/home">Go Back</a></li>
-
-    </ul>
+        <form>
+            <input>Hello</input>
+        </form>
     </div>
     
     </div>

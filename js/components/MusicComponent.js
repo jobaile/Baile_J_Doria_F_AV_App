@@ -91,9 +91,11 @@ export default {
 
             fetch(url)
                 .then(res => res.json())
-                .then(data => {                    
+                .then(data => {  
                     this.retrievedMedia = data;
-                    this.currentMediaDetails = data[0];                    
+
+                    this.currentMediaDetails = data[0] 
+
                 })
             .catch(function(error) {
                 console.error(error);

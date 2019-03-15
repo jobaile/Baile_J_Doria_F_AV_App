@@ -18,7 +18,13 @@ export default {
     },
 
     methods: {
-        navToUserHome() {            
+        navToUserHome() {
+            // this.$router.push({ 
+            //     name: "home", 
+            //     params: { access: '5' 
+            // } });
+            //this.$router.push({ name: "kids", params: { currentuser: this.liveuser, access: '3' } });
+
             this.$router.push({ name: "home", params: { currentuser: this.liveuser } });
             // set a localstorage session object so that we don't have to log back in on page refresh or after our initial login
             localStorage.setItem("cachedUser", JSON.stringify(this.liveuser)); 
