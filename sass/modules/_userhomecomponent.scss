@@ -9,7 +9,18 @@
 .media-title { 
     font-size: 1.5em; 
     padding-top: 1em;
-    font-weight: bolder; 
+    font-weight: 700;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+}
+
+#artistname
+{
+    font-size: 1.5em;
+    font-size: 700;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
 }
 
 .media-desc
@@ -105,9 +116,7 @@
 
 audio {
     width: 70%;
-    margin: 0 13%;
     position: absolute;
-    bottom: 12%;
     opacity: 0.8;
 }
 
