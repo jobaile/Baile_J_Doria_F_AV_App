@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.7.7
+-- version 4.8.3
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Mar 14, 2019 at 10:42 AM
--- Server version: 5.6.38
--- PHP Version: 7.1.12
+-- Generation Time: Mar 15, 2019 at 01:19 AM
+-- Server version: 5.7.23
+-- PHP Version: 7.2.8
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -17,7 +17,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `db_movies`
+-- Database: `db_roku`
 --
 
 -- --------------------------------------------------------
@@ -99,26 +99,26 @@ CREATE TABLE `tbl_movies` (
 --
 
 INSERT INTO `tbl_movies` (`movies_id`, `movies_cover`, `movies_title`, `movies_decade`, `movies_runtime`, `movies_desc`, `movies_trailer`) VALUES
-(1, 'ironman.jpg', 'Iron Man', '1', '', '', 'ironman.mp4'),
-(2, 'deadpool.jpg', 'Deadpool', '1', '', '', 'deadpool.mp4'),
-(3, 'trolls.jpg', 'Trolls', '1', '', '', 'trolls.mp4'),
-(4, 'harrypotter.jpg', 'Harry Potter', '1', '', '', 'harrypotter.mp4'),
-(5, 'lalaland.jpg', 'La La Land', '1', '', '', 'lalaland.mp4'),
-(6, 'matrix.jpg', 'The Matrix', '2', '', '', 'matrix.mp4'),
-(7, 'mask.jpg', 'The Mask', '2', '', '', 'mask.mp4'),
-(8, 'toystory.jpg', 'Toy Story', '2', '', '', 'toystory.mp4'),
-(9, 'hook.jpg', 'Hook', '2', '', '', 'hook.mp4'),
-(10, 'forrest.jpg', 'Forrest Gump', '2', '', '', 'forrest.mp4'),
-(11, 'topgun.jpg', 'Top Gun', '3', '', '', 'topgun.mp4'),
-(12, 'future.jpg', 'Back to the Future', '3', '', '', 'future.mp4'),
-(13, 'goonies.jpg', 'The Goonies', '3', '', '', 'goonies.mp4'),
-(14, 'ghostbusters.jpg', 'Ghostbusters', '3', '', '', 'ghostbusters.mp4'),
-(15, 'breakfast.jpg', 'The Breakfast Club', '3', '', '', 'breakfast.mp4'),
-(16, 'jaws.jpg', 'Jaws', '4', '', '', 'jaws.mp4'),
-(17, 'animal.jpg', 'Animal House', '4', '', '', 'animal.mp4'),
-(18, 'charlotte.jpg', 'Charlottes Web', '4', '', '', 'charlotte.mp4'),
-(19, 'alien.jpg', 'Alien', '4', '', '', 'alien.mp4'),
-(20, 'godfather.jpg', 'The Godfather', '4', '', '', 'godfather.mp4');
+(1, 'ironman.jpg', 'Iron Man', '1', '', 'After being held captive in an Afghan cave, billionaire engineer Tony Stark creates a unique weaponized suit of armor to fight evil.\r\n', 'ironman.mp4'),
+(2, 'deadpool.jpg', 'Deadpool', '1', '', 'A wisecracking mercenary gets experimented on and becomes immortal but ugly, and sets out to track down the man who ruined his looks.\r\n', 'deadpool.mp4'),
+(3, 'trolls.jpg', 'Trolls', '1', '', 'After the Bergens invade Troll Village, Poppy, the happiest Troll ever born, and the curmudgeonly Branch set off on a journey to rescue her friends.\r\n', 'trolls.mp4'),
+(4, 'harrypotter.jpg', 'Harry Potter', '1', '', 'An orphaned boy enrolls in a school of wizardry, where he learns the truth about himself, his family and the terrible evil that haunts the magical world.\r\n', 'harrypotter.mp4'),
+(5, 'lalaland.jpg', 'La La Land', '1', '', 'While navigating their careers in Los Angeles, a pianist and an actress fall in love while attempting to reconcile their aspirations for the future.', 'lalaland.mp4'),
+(6, 'matrix.jpg', 'The Matrix', '2', '', 'A computer hacker learns from mysterious rebels about the true nature of his reality and his role in the war against its controllers.\r\n', 'matrix.mp4'),
+(7, 'mask.jpg', 'The Mask', '2', '', 'Bank clerk Stanley Ipkiss is transformed into a manic superhero when he wears a mysterious mask.\r\n', 'mask.mp4'),
+(8, 'toystory.jpg', 'Toy Story', '2', '', 'A cowboy doll is profoundly threatened and jealous when a new spaceman figure supplants him as top toy in a boy\'s room.\r\n', 'toystory.mp4'),
+(9, 'hook.jpg', 'Hook', '2', '', 'When Captain Hook kidnaps his children, an adult Peter Pan must return to Neverland and reclaim his youthful spirit in order to challenge his old enemy.\r\n', 'hook.mp4'),
+(10, 'forrest.jpg', 'Forrest Gump', '2', '', 'The presidencies of Kennedy and Johnson, the events of Vietnam, Watergate, and other history unfold through the perspective of an Alabama man with an IQ of 75.\r\n', 'forrest.mp4'),
+(11, 'topgun.jpg', 'Top Gun', '3', '', 'As students at the United States Navy\'s elite fighter weapons school compete to be best in the class, one daring young pilot learns a few things from a civilian instructor that are not taught in the classroom.\r\n', 'topgun.mp4'),
+(12, 'future.jpg', 'Back to the Future', '3', '', 'Marty McFly, a 17-year-old high school student, is accidentally sent thirty years into the past in a time-traveling DeLorean invented by his close friend, the maverick scientist Doc Brown.\r\n', 'future.mp4'),
+(13, 'goonies.jpg', 'The Goonies', '3', '', 'In order to save their home from foreclosure, a group of misfits set out to find a pirate\'s ancient valuable treasure.\r\n', 'goonies.mp4'),
+(14, 'ghostbusters.jpg', 'Ghostbusters', '3', '', 'Three former parapsychology professors set up shop as a unique ghost removal service.\r\n', 'ghostbusters.mp4'),
+(15, 'breakfast.jpg', 'The Breakfast Club', '3', '', 'Five high school students meet in Saturday detention and discover how they have a lot more in common than they thought.\r\n', 'breakfast.mp4'),
+(16, 'jaws.jpg', 'Jaws', '4', '', 'When a killer shark unleashes chaos on a beach resort, it\'s up to a local sheriff, a marine biologist, and an old seafarer to hunt the beast down.\r\n', 'jaws.mp4'),
+(17, 'animal.jpg', 'Animal House', '4', '', 'At a 1962 college, Dean Vernon Wormer is determined to expel the entire Delta Tau Chi Fraternity, but those troublemakers have other plans for him.\r\n', 'animal.mp4'),
+(18, 'charlotte.jpg', 'Charlottes Web', '4', '', 'A gentle and wise grey spider with a flair for promotion pledges to save a young pig from slaughter for dinner food.\r\n', 'charlotte.mp4'),
+(19, 'alien.jpg', 'Alien', '4', '', 'After a space merchant vessel perceives an unknown transmission as a distress call, its landing on the source moon finds one of the crew attacked by a mysterious lifeform, and they soon realize that its life cycle has merely begun.\r\n', 'alien.mp4'),
+(20, 'godfather.jpg', 'The Godfather', '4', '', 'The aging patriarch of an organized crime dynasty transfers control of his clandestine empire to his reluctant son.\r\n', 'godfather.mp4');
 
 -- --------------------------------------------------------
 
@@ -178,16 +178,16 @@ CREATE TABLE `tbl_tv` (
 --
 
 INSERT INTO `tbl_tv` (`tv_id`, `tv_cover`, `tv_title`, `tv_decade`, `tv_desc`, `tv_trailer`) VALUES
-(1, 'got.jpg', 'Game of Thrones', 1, '', 'got.mp4'),
-(2, 'criminalminds.jpg', 'Criminal Minds', 1, '', 'criminalminds.mp4'),
-(3, 'sheldon.jpg', 'Young Sheldon', 1, '', 'sheldon.mp4'),
-(4, 'rickandmorty.jpg', 'Rick and Morty', 1, '', 'rickandmorty.mp4'),
-(5, 'modern.jpg', 'Modern Family', 1, '', 'modern.mp4'),
-(6, 'pawpatrol.jpg', 'Paw Patrol', 1, '', 'pawpatrol.mp4'),
-(7, 'doctorwho.jpg', 'Doctor Who', 2, '', 'doctorwho.mp4'),
-(8, 'adventuretime.jpg', 'Adventure Time', 1, '', 'adventuretime.jpg'),
-(9, 'greys.jpg', 'Greys Anatomy', 1, '', 'greys.mp4'),
-(10, 'strangerthings.jpg', 'Stranger Things', 1, '', 'strangerthings.mp4');
+(1, 'got.jpg', 'Game of Thrones', 1, 'Nine noble families fight for control over the mythical lands of Westeros, while an ancient enemy returns after being dormant for thousands of years.\r\n', 'got.mp4'),
+(2, 'criminalminds.jpg', 'Criminal Minds', 1, 'The cases of the F.B.I. Behavioral Analysis Unit (B.A.U.), an elite group of profilers who analyze the nation\'s most dangerous serial killers and individual heinous crimes in an effort to anticipate their next moves before they strike again.\r\n', 'criminalminds.mp4'),
+(3, 'sheldon.jpg', 'Young Sheldon', 1, 'Meet a child genius named Sheldon Cooper; (already seen as an adult in The Big Bang Theory(2007)) and his family. Some unique challenges face Sheldon who seems socially impaired.\r\n', 'sheldon.mp4'),
+(4, 'rickandmorty.jpg', 'Rick and Morty', 1, 'An animated series that follows the exploits of a super scientist and his not-so-bright grandson.\r\n', 'rickandmorty.mp4'),
+(5, 'modern.jpg', 'Modern Family', 1, 'Three different but related families face trials and tribulations in their own uniquely comedic ways.\r\n', 'modern.mp4'),
+(6, 'pawpatrol.jpg', 'PAW Patrol', 1, 'Led by a boy named Ryder, a team of six playful rescue dogs use their individual talents to protect the seaside town of Adventure Bay. The pups are occasionally joined by newer helpers: Cap\'n Turbot, Robo-Dog, Everest, and Tracker.\r\n', 'pawpatrol.mp4'),
+(7, 'doctorwho.jpg', 'Doctor Who', 2, 'The further adventures in time and space of the alien adventurer known as the Doctor, a Time Lord or Lady who can change appearance and gender by regenerating when near death, and his or her human companions.\r\n', 'doctorwho.mp4'),
+(8, 'adventuretime.jpg', 'Adventure Time', 1, 'A 12-year-old boy and his best friend, wise 28-year-old dog with magical powers, go on a series of surreal adventures with each other.\r\n', 'adventuretime.jpg'),
+(9, 'greys.jpg', 'Greys Anatomy', 1, 'A drama centered on the personal and professional lives of five surgical interns and their supervisors.\r\n', 'greys.mp4'),
+(10, 'strangerthings.jpg', 'Stranger Things', 1, 'When a young boy disappears, his mother, a police chief, and his friends must confront terrifying forces in order to get him back.\r\n\r\n', 'strangerthings.mp4');
 
 -- --------------------------------------------------------
 
@@ -215,7 +215,7 @@ CREATE TABLE `tbl_user` (
 
 INSERT INTO `tbl_user` (`user_id`, `user_fname`, `user_name`, `user_pass`, `user_email`, `user_date`, `user_login`, `user_ip`, `user_admin`, `user_access`, `user_avatar`) VALUES
 (1, 'Joanna', 'user', '123', 'joanna@hello.ca', '2019-03-13 00:00:18', '0000-00-00 00:00:00', '::1', 1, 5, 'user1.png'),
-(2, 'Kid', 'user2', '123', 'kid@hello.ca', '2019-03-13 00:00:21', '0000-00-00 00:00:00', 'no', 0, 3, 'user3.png');
+(2, 'Kid', 'user2', '123', 'kid@hello.ca', '2019-03-13 00:00:21', '0000-00-00 00:00:00', '::1', 0, 3, 'user3.png');
 
 --
 -- Indexes for dumped tables

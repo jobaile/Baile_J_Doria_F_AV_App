@@ -1,8 +1,15 @@
-.menu img {
+.typemenu img {
   width: 30px;
   cursor: pointer;
   margin-left: 20px;
   margin-top: 25px;
+}
+
+.typemenu img:hover
+{
+	filter: gray; /* IE6-9 */
+  -webkit-filter: grayscale(100%);
+  transition: all 0.5s ease;
 }
 
 #navlogo
@@ -35,4 +42,22 @@
 .button:hover
 {
   background-color: #5d3582;
+}
+
+#setting_link 
+{
+  color: $purple;
+}
+
+#setting_link:hover
+{
+  color: #5d3582;
+}
+
+.profileicon
+{
+  width: 30px;
+  cursor: pointer;
+  margin-top: 5px;
+  margin-left: 5px;
 }
