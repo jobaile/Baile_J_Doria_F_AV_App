@@ -128,6 +128,8 @@
     position: relative;
     float: left;
   }
+
+
   
   .btn_sign {
     background: $purple;
@@ -143,6 +145,12 @@
     margin-top: 20px;
     margin-bottom: 20px;
     cursor: pointer;
+  }
+
+  .btn_sign:hover
+  {
+    background: #5d3582;
+    transition: all 0.5s ease;
   }
   
   
@@ -167,4 +175,11 @@
   h2 {
       padding-left: 2.5em;
       color: $purple;
+  }
+
+  #loglogo
+  {
+    width: 50%;
+    margin-left: 25%;
+    margin-right: 25%;
   }
