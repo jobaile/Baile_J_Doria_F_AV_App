@@ -3,7 +3,7 @@ export default {
   <div class="top-bar">
       <div class="top-bar-left">
           <img src="images/logo-purple.png" alt="nav logo" id="navlogo">
-          <ul class="menu" id="main-nav">
+          <ul class="menu typemenu" id="main-nav">
           <li v-on:click="changeMediaType">
               <img src="images/icon-movies.svg" alt="Movies Icon" id="movie" class="navlinks" />
           </li>
@@ -17,13 +17,14 @@ export default {
       </div>
       <div class="top-bar-right">
           <ul class="menu">
+          <li><img src="images/user1.png" alt="user profile" class="profileicon"></li>
           <li>
           <router-link tag="li" to="/admin">
-            <a>Settings</a>
+            <a id="setting_link">Settings</a>
           </router-link>
           </li>
           <!--<li><input type="search" name="" placeholder="Search"></li>-->
-          <li><button type="button" class="button">Search</button></li>
+          <!--<li><button type="button" class="button">Search</button></li>-->
           <li><button id="logoutbutton" type="button" class="button" v-on:click="logout()">Log Out</button></li>
           </ul>
       </div>

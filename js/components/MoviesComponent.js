@@ -11,6 +11,7 @@ export default {
         
         <div id="lightbox-container">
             <h4 class="media-title">{{mediaDetails.movies_title}}</h4>
+            <p class="media-desc"> Sample description sample description sample description sample description</p>
         </div>
 
         <div class="image-container">
