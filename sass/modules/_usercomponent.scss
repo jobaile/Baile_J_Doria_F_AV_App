@@ -48,3 +48,29 @@
     padding: 20px;
 }
 
+label 
+{
+    display: block;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.8;
+    color: $purple;
+    float: left;
+}
+
+.settingssubmit
+{
+    background-color: $purple;
+    padding: 10px 20px 10px 20px;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+}
+
+.settingssubmit:hover
+{
+    background-color: $dark-purple;
+    cursor: pointer;
+}

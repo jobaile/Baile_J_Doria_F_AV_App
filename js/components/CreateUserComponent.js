@@ -27,7 +27,7 @@ export default {
             <option value="0">No</option>
         </select>
 
-        <button type="submit" name="submit">Create User/button>
+        <button type="submit" name="submit" class="settingssubmit">Create User</button>
     </form>
 
     </div>
