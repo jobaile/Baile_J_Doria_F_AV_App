@@ -37,7 +37,7 @@ const vm = new Vue({
 
     user: [],
 
-    //currentUser: {},
+    currentUser: {},
 
     toastmessage: "Login failed!"
   },
