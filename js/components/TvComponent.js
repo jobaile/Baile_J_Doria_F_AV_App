@@ -4,23 +4,24 @@ export default {
     template: `
     <div class="container">
 
-        <div class="grid-x" id="vidbox" ref="lbox" v-if="activeInfo">
-        <button class="close-button" @click="closebox">
-            <span>&times;</span>
-        </button>
-        
-        <div id="lightbox-container">
-            <h4 class="media-title">{{mediaDetails.tv_title}}</h4>
-        </div>
+        <div class="grid-x" id="vidbox" ref="lbox" v-if="activeMediaType == 'video'">
+            <button class="close-button" @click="closebox">
+                <span>&times;</span>
+            </button>
+            
+            <div id="lightbox-container">
+                <h4 class="media-title">{{mediaDetails.movies_title}}</h4>
+            </div>
 
-        <div class="image-container">
-            <video autoplay controls muted :src="'video/tv/' + mediaDetails.tv_trailer" class="fs-video"></video>
+            <div class="image-container">
+                <video autoplay controls muted :src="'video/' + mediaDetails.movies_trailer"></video>
+            </div>
         </div>
 
     </div>
 
-    <div>
-        <img v-if="activeInfo" v-for="media in retrievedTV" :src="'images/tv/' + media.tv_cover" alt="media thumb" @click="switchActiveMedia(television)" class="img-thumbnail rounded float-left media-thumb">
+    <div id="movieSelect" class="grid-x grid-margin-x">
+        <img v-if="activeMediaType == 'video'" v-for="media in retrievedMedia" :src="'images/movie/' + media.movies_cover" alt="media thumb" @click="switchActiveMedia(media)" class="img-thumbnail rounded float-left media-thumb cell small-6 medium-4 large-3">
     </div>
 
     </div>
@@ -28,20 +29,20 @@ export default {
 
     data() {
         return {
-            activeInfo: "television",
+            activeMediaType: "video",
 
             mediaDetails: { 
                 source: "",
             },
 
-            retrievedTV: [],
+            retrievedMedia: [],
         }
     },
 
     created: function() {
         console.log('params:', this.$route.params);
 
-        this.loadMedia(null, "television");
+        this.loadMedia(null, "video");
     },
 
     methods: {
@@ -53,13 +54,13 @@ export default {
             }
             // build the url based on any filter we pass in (will need to expand on this for audio)
 
-            let url = (filter == null) ? `./admin/tv.php?television=${this.activeInfo}` : `./admin/tv.php?television=${this.mediaType}&&filter=${filter}`;
+            let url = (filter == null) ? `./admin/index.php?video=${this.activeInfo}` : `./admin/index.php?video=${this.mediaType}&&filter=${filter}`;
 
             fetch(url)
                 .then(res => res.json())
                 .then(data => {         
                     //grabs the media           
-                    this.retrievedTV = data;
+                    this.retrievedMedia = data;
                     //grabs the details each
                     this.mediaDetails = data[0];                    
                 })
@@ -68,10 +69,10 @@ export default {
             });
         },
 
-        switchActiveMedia(television) {
-            console.log(television);
+        switchActiveMedia(media) {
+            console.log(media);
 
-            this.mediaDetails = television;
+            this.mediaDetails = media;
             //opens the lightbox
             this.$refs.lbox.style.display = "block";
         },
