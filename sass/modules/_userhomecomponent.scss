@@ -9,7 +9,18 @@
 .media-title { 
     font-size: 1.5em; 
     padding-top: 1em;
-    font-weight: bolder; 
+    font-weight: 700;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+}
+
+#artistname
+{
+    font-size: 1.5em;
+    font-size: 700;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
 }
 
 .media-desc
@@ -90,7 +101,7 @@
 }
 
 .media-thumb {
-    height: 140px;
+    height: 100%;
     margin: 0.7em;
 }
 
@@ -105,9 +116,7 @@
 
 audio {
     width: 70%;
-    margin: 0 13%;
     position: absolute;
-    bottom: 12%;
     opacity: 0.8;
 }
 
@@ -144,6 +153,7 @@ audio {
     color: #e6e6e6;
     font-family: 'Roboto', sans-serif;
     font-size: 1.2em;
+    text-decoration: underline;
 }
 
 #tvSelect
@@ -162,4 +172,10 @@ audio {
 #movieSelect
 {
     clear: both;
+}
+
+.video-container
+{
+    margin-bottom: 50px;
+    margin-top: 30px;
 }

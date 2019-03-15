@@ -18,7 +18,7 @@ export default {
           </li>
           </ul>
       </div>
-      <div class="top-bar-right">
+      <div class="top-bar-right" id="usermenunav">
           <ul class="menu">
           <li><img src="images/user1.png" alt="user profile" class="profileicon"></li>
           <li>

@@ -7,9 +7,7 @@ export default {
 
     <div class="adminChoices cell small-6 medium-6 large-4">
     <ul>
-            <li><a href="#">Create User</a></li>
-            <li><a href="#">Edit User</a></li>
-            <li><a href="#">Delete User</a></li>
+            <li><a href="#/create">Create User</a></li>
             <li><a href="#/home">Go Back</a></li>
 
     </ul>

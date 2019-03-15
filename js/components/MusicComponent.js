@@ -15,13 +15,13 @@ export default {
 
             <div class="lightbox-container">
                 <h4 class="media-title">{{currentMediaDetails.music_title}}</h4>
-                <h5>{{currentMediaDetails.music_artist}}</h5>
+                <h5 id="artistname">{{currentMediaDetails.music_artist}}</h5>
                 <p class="media-desc" v-html="currentMediaDetails.music_runtime"></p>
             </div>
 
-            <div class="audio-container">
+            <div class="audio-container grid-x align-center-middle">
                 <audio controls :src="'music/' + currentMediaDetails.music_audio"/>
-                <img :src="'images/music/' + currentMediaDetails.music_cover" alt="album art"/>
+                <img :src="'images/music/' + currentMediaDetails.music_cover" class="cell large-5 medium-5 small-6" alt="album art"/>
             </div>
         </div>
 
@@ -91,9 +91,11 @@ export default {
 
             fetch(url)
                 .then(res => res.json())
-                .then(data => {                    
+                .then(data => {  
                     this.retrievedMedia = data;
-                    this.currentMediaDetails = data[0];                    
+
+                    this.currentMediaDetails = data[0] 
+
                 })
             .catch(function(error) {
                 console.error(error);

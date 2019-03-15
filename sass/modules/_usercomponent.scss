@@ -10,6 +10,11 @@
 
 }
 
+.card:hover
+{
+    background: darken($roku-purple, 10%);
+}
+
 .card-body p 
 { 
     margin-bottom: 10px;
