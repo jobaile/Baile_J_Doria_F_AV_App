@@ -21,7 +21,7 @@ export default {
       <div class="top-bar-right">
           <ul class="menu">
           <li><img src="images/user1.png" alt="user profile" class="profileicon"></li>
-          <li v-if="administrator">
+          <li>
           <router-link tag="li" to="/admin">
             <a id="setting_link">Settings</a>
           </router-link>
@@ -68,7 +68,18 @@ export default {
       this.$router.push({ path: "/" });
       this.authenticated = false;
       localStorage.clear("cachedUser");
-    }
+    },
+      fetchOneUser() {
+      let url = `./admin/scripts/users.php?oneuser=:id`;
+  
+      fetch(url)
+        .then(res => res.json())
+        .then(data => {this.userList = data})
+      .catch(function(error) {
+        console.error(error);
+      });
+      }
+  
   },
 
   components: {

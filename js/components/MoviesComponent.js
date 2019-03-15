@@ -108,7 +108,17 @@ export default {
                     // we're gettin them all, dump it all in the media container
                     this.retrievedMedia = data;
                     // grab the first one in the list and make it active
-                    this.currentMediaDetails = data[0];                    
+                    this.currentMediaDetails = data[0];  
+                    
+                    //this is not working :()
+                    // if (localStorage.getItem("user_access") > 3) {
+                    //     this.retrievedMedia = data;
+                    //   } 
+                    //   else {
+                    //     this.retrievedMedia = data.filter(
+                    //       media => media.movies_permissions === "2"
+                    //     );
+                    // }
                 })
             .catch(function(error) {
                 console.error(error);
