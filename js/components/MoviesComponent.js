@@ -18,8 +18,8 @@ export default {
                 <h4 class="media-title">{{currentMediaDetails.movies_title}}</h4>
             </div>
 
-            <div class="video-container">
-                <video autoplay controls muted :src="'video/' + currentMediaDetails.movies_trailer"></video>
+            <div class="video-container" grid-x>
+                <video autoplay controls muted :src="'video/' + currentMediaDetails.movies_trailer" class="cell large-12 medium-12 small-12"></video>
             </div>
 
             <div class="media-desc">

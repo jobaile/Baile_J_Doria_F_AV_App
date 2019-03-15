@@ -5,6 +5,7 @@ export default {
         <div class="login-box">
             <form>
                 <div class="cont_tabs_login">
+                    <img src="images/logo-purple.png" alt="roku logo" id="loglogo">
                     <h2 class="active">Log In</h2>
                     <span class="linea_bajo_nom"></span>
                 </div>

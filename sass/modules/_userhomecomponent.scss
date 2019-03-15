@@ -90,7 +90,7 @@
 }
 
 .media-thumb {
-    height: 140px;
+    height: 100%;
     margin: 0.7em;
 }
 
@@ -144,6 +144,7 @@ audio {
     color: #e6e6e6;
     font-family: 'Roboto', sans-serif;
     font-size: 1.2em;
+    text-decoration: underline;
 }
 
 #tvSelect
@@ -162,4 +163,10 @@ audio {
 #movieSelect
 {
     clear: both;
+}
+
+.video-container
+{
+    margin-bottom: 50px;
+    margin-top: 30px;
 }
