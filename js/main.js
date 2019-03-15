@@ -2,10 +2,6 @@
 import UsersComponent from './components/UsersComponent.js';
 import LoginComponent from './components/LoginComponent.js';
 import AdminComponent from './components/AdminComponent.js';
-import MoviesComponent from './components/MoviesComponent.js';
-import TVComponent from './components/TvComponent.js';
-import MusicComponent from './components/MusicComponent.js';
-
 import HomeComponent from './components/HomeComponent.js';
 
 let router = new VueRouter({
@@ -14,9 +10,6 @@ let router = new VueRouter({
       { path: '/', redirect: { name: "login"} },
       { path: '/login', name: "login", component: LoginComponent },
       { path: '/users', name: 'users', component: UsersComponent },
-      // { path: '/home', name: "home", component: MoviesComponent, props: true },
-      // { path: '/tv', name: "television", component: TVComponent },
-      // { path: '/music', name: "music", component: MusicComponent },
       { path: '/admin', name: 'admin', component: AdminComponent },
       { path: '/home', name: 'home', component: HomeComponent, props: true }
   ]

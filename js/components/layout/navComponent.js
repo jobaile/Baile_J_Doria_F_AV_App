@@ -21,7 +21,7 @@ export default {
       <div class="top-bar-right">
           <ul class="menu">
           <li><img src="images/user1.png" alt="user profile" class="profileicon"></li>
-          <li>
+          <li v-if="administrator">
           <router-link tag="li" to="/admin">
             <a id="setting_link">Settings</a>
           </router-link>
