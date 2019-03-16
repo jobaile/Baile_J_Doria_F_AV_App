@@ -3,39 +3,16 @@ $roku-purple: #6C3C97;
 $purple: #6C3C97;
 $dark-purple: #5d3582;
 $black: #1b1b1b;
-
-@mixin vertical-align($position: relative) {
-    position: $position;
-    top: 50%;
-    -webkit-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
-}
-
-
-@font-face {
-    font-family: 'bauhaus-boldregular';
-    src: url('../fonts/bauhaub-webfont.woff2') format('woff2'),
-         url('../fonts/bauhaub-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-
-}
-
-
-@font-face {
-    font-family: 'helveticaneue-medium';
-    src: url('../fonts/helveticaneue-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-
-}
-
-
-$main-color: #73429B; 
-$second-color: #77479d;
-$dark-color: #3C3C3C;
 $white: #F5F5F5;
-$heading-font: "bauhaus-boldregular", sans-serif; 
-$reg-font: "helveticaneue-medium", sans-serif; 
+
+@font-face {
+    font-family: 'Open Sans', sans-serif;
+    src: url('https://fonts.googleapis.com/css?family=Open+Sans');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+$reg-font: 'Open Sans', sans-serif; 
   

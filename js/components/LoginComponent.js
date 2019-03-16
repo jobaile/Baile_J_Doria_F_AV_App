@@ -10,8 +10,8 @@ export default {
                     <span class="linea_bajo_nom"></span>
                 </div>
                 <div class="cont_text_inputs">
-                    <input v-model="input.username" type="text" class="input_form_sign d_block active_inp" placeholder="USERNAME" name="emauil_us" />
-                    <input v-model="input.password" type="password" class="input_form_sign d_block  active_inp" placeholder="PASSWORD" name="pass_us" />  
+                    <input v-model="input.username" type="text" class="input_form_sign d_block active_inp" placeholder="USERNAME" name="username" />
+                    <input v-model="input.password" type="password" class="input_form_sign d_block  active_inp" placeholder="PASSWORD" name="password" />  
                 </div>
                 <div class="login_btn">
                     <button v-on:click.prevent="login()" type="submit" class="btn_sign">Log In</button>
