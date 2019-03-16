@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Mar 15, 2019 at 03:50 PM
+-- Generation Time: Mar 16, 2019 at 03:18 AM
 -- Server version: 5.6.38
 -- PHP Version: 7.1.12
 
@@ -156,7 +156,7 @@ CREATE TABLE `tbl_music` (
 
 INSERT INTO `tbl_music` (`music_id`, `music_cover`, `music_title`, `music_artist`, `music_decade`, `music_audio`, `music_time`, `music_permission`) VALUES
 (1, 'kanye.jpg', 'Famous', 'Kanye West', 1, 'famous.mp3', '', 1),
-(2, 'edsheeran.jpg', 'Perfect', 'Ed Sheeran', 1, 'edsheeran.jpg', '', 2),
+(2, 'edsheeran.jpg', 'Perfect', 'Ed Sheeran', 1, 'sheeran.mp3', '', 2),
 (3, 'ariana.jpg', 'Thank U Next', 'Ariana Grande', 1, 'thanku.mp3', '', 1),
 (4, 'adele.jpg', 'Rolling in the Deep', 'Adele', 1, 'rolling.mp3', '', 1),
 (5, 'jackson.jpg', 'Billie Jean', 'Michael Jackson', 3, 'billiejean.mp3', '', 2),
@@ -284,7 +284,8 @@ CREATE TABLE `tbl_user` (
 
 INSERT INTO `tbl_user` (`user_id`, `user_fname`, `user_name`, `user_pass`, `user_email`, `user_date`, `user_login`, `user_ip`, `user_admin`, `user_access`, `user_avatar`) VALUES
 (1, 'Joanna', 'user', '123', 'joanna@hello.ca', '2019-03-13 00:00:18', '0000-00-00 00:00:00', '::1', 1, 5, 'user1.png'),
-(2, 'Kid', 'user2', '123', 'kid@hello.ca', '2019-03-13 00:00:21', '0000-00-00 00:00:00', '::1', 0, 3, 'user3.png');
+(2, 'Kid', 'user2', '123', 'kid@hello.ca', '2019-03-13 00:00:21', '0000-00-00 00:00:00', '::1', 0, 3, 'user3.png'),
+(3, 'Joanna', '123', '123', 'joannabaile@gmail.com', '2019-03-15 23:19:10', '0000-00-00 00:00:00', 'no', 0, 0, '');
 
 --
 -- Indexes for dumped tables
@@ -388,7 +389,7 @@ ALTER TABLE `tbl_tv_decade`
 -- AUTO_INCREMENT for table `tbl_user`
 --
 ALTER TABLE `tbl_user`
-  MODIFY `user_id` mediumint(8) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `user_id` mediumint(8) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
