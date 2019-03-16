@@ -24,29 +24,28 @@
         echo json_encode($users);
     }
 
-    if (isset($_GET['oneuser'])){
-        include('connect.php');
+    function createUser($fname,$username,$password,$email, $access, $admin){
+		include('connect.php');
+	
+		$create_user_query = 'INSERT INTO tbl_user(user_fname,user_name,user_pass,user_email, user_access, user_admin)';
+		$create_user_query .= ' VALUES(:fname,:username,:password,:email, :access, :admin)';
 
-        $queryOne = 'SELECT * FROM tbl_user WHERE user_id = :id';
+		$create_user_set = $pdo->prepare($create_user_query);
+		$create_user_set->execute(
+			array(
+				':fname'=>$fname,
+				':username'=>$username,
+				':password'=>$password,
+                ':email'=>$email,
+                ':access'=>$access,
+                ':admin'=>$admin
+			)
+		);
 
-        $getOneUser = $pdo->prepare($query);
-        $getOneUser->execute(
-            array(
-                ':id'=> $id
-            )
-        );
-        
-        while($user = $getOneUser->fetch(PDO::FETCH_ASSOC)) {
-            $currentuser =  array();
-            $currentuser['id'] = $user['user_id'];
-            $currentuser['username'] = $user['user_name'];
-            $currentuser['admin'] = $user['user_admin'];
-            $currentuser['access'] = $user['user_access'];
-            $currentuser['avatar'] = $user['user_avatar'];
-
-            $getOneUser[] = $currentuser;
-        }
-
-        echo json_encode($users);
-    }
-?>
+		if($create_user_set->rowCount()){
+			redirect_to('index.php');
+		}else{
+			$message = 'Your hiring practices have failed you.. this individual sucks...';
+			return $message;
+		}
+}

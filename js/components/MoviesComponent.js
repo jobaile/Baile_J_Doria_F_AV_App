@@ -105,14 +105,6 @@ export default {
                     // grab the first one in the list and make it active
                     this.currentMediaDetails = data[0];  
                     
-                    if (localStorage.getItem("admin", data.admin) == 1) {
-                        this.mediaPermission = null;
-                    } else {
-                        this.mediaPermission = '2';
-
-                    }
-
-
                     //this is not working :(
                     // if (localStorage.getItem("user_access") > 3) {
                     //     this.retrievedMedia = data;
@@ -122,6 +114,7 @@ export default {
                     //       media => media.movies_permissions === "2"
                     //     );
                     // }
+
                 })
             .catch(function(error) {
                 console.error(error);
