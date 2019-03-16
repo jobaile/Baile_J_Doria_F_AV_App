@@ -27,7 +27,7 @@ export default {
             <option value="0">No</option>
         </select>
 
-        <button type="submit" name="submit" v-on:click.prevent="createUser()">Create User</button>
+        <button type="submit" name="submit" class="settingssubmit" v-on:click.prevent="createUser()">Create User</button>
     </form>
 
     </div>
