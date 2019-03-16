@@ -5,14 +5,13 @@ The Flashback app is part of the Roku streaming service. Subscribers can use thi
 access three separate flashback features; movies, television (tv) and music.
 
 ## Features
-* A one-page website! Thanks Vue
+* A one-page website
 * Filters by year
-* Has a Kids component
-* Settings just for the administrator to see
+* Got some rad movies and tunes
 
 ## Installation
-**Install [npm](https://www.npmjs.com/get-npm) if not already done so**
-**Video and music files [Google Drive link](https://google.ca)**
+* Install [npm](https://www.npmjs.com/get-npm) if not already done so**
+* Video and music files [Google Drive link](https://drive.google.com/file/d/15epJVbriOxwEYP-7C0X_VvAwAZBj_UoP/view?usp=sharing)**
 
 1. Command line:
 `$ git clone https://github.com/jobaile/Baile_J_Doria_F_AV_App`
