@@ -28,6 +28,7 @@ export default {
         </select>
 
         <button type="submit" name="submit" class="settingssubmit" v-on:click.prevent="createUser()">Create User</button>
+        <p>Or go <a href="#/home">Go Back</a></p>
     </form>
 
     </div>
